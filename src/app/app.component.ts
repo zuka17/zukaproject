@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [LoginComponent, RegisterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'zukaproject';
+  public loginPage = true;
+
+  constructor() {}
+
+  public login() {
+    this.loginPage = true;
+  }
+
+  public register() {
+    this.loginPage = false;
+  }
 }
