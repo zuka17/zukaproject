@@ -12,8 +12,7 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class LoginComponent extends RegisterComponent {
   @Output() register = new EventEmitter();
-  public username!: string;
-  public password!: string;
+ 
 
 
 }
