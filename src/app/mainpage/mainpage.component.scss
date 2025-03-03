@@ -1,0 +1,21 @@
+.father{
+    width: 1500px;
+    height: 800px;
+  display: flex;
+  justify-content: space-between;
+.wrapper{
+      width: 300px;
+      height: 325px;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  .small-width{
+    width: 200px;
+    height: 200px;
+}
+.margin-left{
+    margin-left: 50%;
+}
+}
+ 
+}

@@ -46,12 +46,12 @@
     </div>
 
     <div class="buttons">
-      <button (click)="login.emit()" class="btn btn-primary" type="button">
+      <button routerLink="/login" class="btn btn-primary" type="button">
         Log in
       </button>
       <button
         [disabled]="userForm.invalid"
-        (click)="Register()"
+        routerLink="/mainpage"
         type="button"
         class="btn btn-secondary"
       >

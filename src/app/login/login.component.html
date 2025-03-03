@@ -1,4 +1,4 @@
-<div class="login-register-wrapper">
+<div class="login-register-wrapper ">
  <h1>Log in</h1>
   <form>
     <div class="mb-3">
@@ -22,8 +22,8 @@
     </div>
   </form>
   <div class="buttons">
-    <button  class="btn btn-primary">Login</button>
-    <button (click)="register.emit()" class="btn btn-secondary">
+    <button routerLink="/mainpage"  class="btn btn-primary">Login</button>
+    <button routerLink="/register" class="btn btn-secondary">
       Register
     </button>
   </div>

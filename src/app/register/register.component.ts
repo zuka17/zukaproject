@@ -1,39 +1,23 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import {
-  AbstractControl,
   FormControl,
   FormGroup,
   ReactiveFormsModule,
-  ValidationErrors,
   Validators,
 } from '@angular/forms';
-// import { ErrorComponent } from '../error/error.component';
+
 import { NgClass } from '@angular/common';
 import { ErrorComponent } from '../error/error.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  imports: [ReactiveFormsModule, NgClass, ErrorComponent],
+  imports: [ReactiveFormsModule, NgClass, ErrorComponent, RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
-  @Output() login = new EventEmitter();
-
   public userForm = new FormGroup({
-    // username: new FormControl('', [
-    //   Validators.required,
-    //   Validators.minLength(3),
-    //   Validators.maxLength(10),
-    //   // usernameValidator(),
-    // ]),
-    // email: new FormControl('', [Validators.required, Validators.email]),
-    // password: new FormControl('', [
-    //   Validators.required,
-    //   Validators.minLength(3),
-    //   Validators.maxLength(10),
-    //   Validators.pattern('^[a-zA-Z0-9]*$'),
-    // ]),
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
@@ -60,4 +44,3 @@ export class RegisterComponent {
     return this.userForm.get('email') as FormControl;
   }
 }
-

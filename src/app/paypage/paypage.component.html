@@ -1,0 +1,20 @@
+<div class="login-register-wrapper">
+  <form [formGroup]="payForm">
+    <div class="imb-3 padding">
+      <label class="form-label" for="addres">write your adress</label>
+      <input type="text" id="addres"    formControlName="addres"class="form-control" />
+    </div>
+    <div class="imb-3">
+      <label for="cardnumber" class="form-label">write your card number</label>
+      <input type="text"   formControlName="cardnumber" id="cardnumber" class="form-control" />
+    </div>
+    <div class="imb-3">
+      <label for="phone number" class="form-label"
+        >write your phone number</label
+      ><input type="text"   formControlName="phonenumber" id="phone number" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary margin-top"     [disabled]="payForm
+    .invalid"routerLink="/login">pay</button>
+  </form>
+</div>
