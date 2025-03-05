@@ -1,0 +1,16 @@
+{
+  "logedin": [
+    {
+      "id": "1",
+      "username": "zuka",
+      "email": "zuka@machaidze",
+      "password": "P@ssw0rd1"
+    },
+    {
+      "id": "2",
+      "username": "nick",
+      "email": "nick@nick",
+      "password": "Nick123@#123sad"
+    }
+  ]
+}

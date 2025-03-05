@@ -1,14 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RegisterComponent } from '../register/register.component';
-import { Router, RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, RouterLink,],
+  imports: [FormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent extends RegisterComponent {
- 
-}
+export class LoginComponent {}

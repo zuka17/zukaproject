@@ -8,7 +8,6 @@ import { StrongerwithyouintenslyComponent } from './strongerwithyouintensly/stro
 import { LemaleelixirobsoluComponent } from './lemaleelixirobsolu/lemaleelixirobsolu.component';
 import { PaypageComponent } from './paypage/paypage.component';
 
-
 export const routes: Routes = [
   {
     path: '',
@@ -69,8 +68,10 @@ export const routes: Routes = [
     title: 'paypage',
     path: 'pay',
     loadComponent: () =>
-      import('./paypage/paypage.component').then(
-        (m) => PaypageComponent
-      ),
+      import('./paypage/paypage.component').then((m) => PaypageComponent),
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
   },
 ];
