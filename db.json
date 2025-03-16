@@ -1,16 +1,22 @@
 {
-  "logedin": [
+  "users": [
     {
       "id": "1",
       "username": "zuka",
-      "email": "zuka@machaidze",
-      "password": "P@ssw0rd1"
+      "password": "zuka2011",
+      "email": "zuka@machaidze"
     },
     {
       "id": "2",
       "username": "nick",
-      "email": "nick@nick",
-      "password": "Nick123@#123sad"
+      "password": "Nick123@#123sad",
+      "email": "nick@nick"
+    },
+    {
+      "id": "ca03",
+      "username": "zuka",
+      "password": "zuka2011",
+      "email": "zukamachaidze17@gmail.com"
     }
   ]
 }

@@ -1,17 +1,48 @@
 <div class="login-register-wrapper">
   <h1>Log in</h1>
-  <form>
+  <form >
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
-      <input type="text" class="form-control" id="username" />
+      <input
+              [(ngModel)]="username"
+[ngModelOptions]="{ standalone: true }"
+
+        type="text"
+        class="form-control"
+        id="username"
+
+      />
+   
     </div>
+
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" />
+      <input
+              [(ngModel)]="password"
+              [ngModelOptions]="{ standalone: true }"
+        type="password"
+
+        class="form-control"
+        id="password"
+
+      />
+
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        [(ngModel)]="email"
+        [ngModelOptions]="{ standalone: true }"
+        type="email"
+        id="email"
+
+        class="form-control"
+      />
+   
     </div>
   </form>
   <div class="buttons">
-    <button routerLink="/mainpage" class="btn btn-primary">Login</button>
+    <button (click)="Login()" class="btn btn-primary">Login</button>
     <button routerLink="/register" class="btn btn-secondary">Register</button>
   </div>
 </div>

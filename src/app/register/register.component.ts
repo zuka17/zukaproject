@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -6,9 +6,11 @@ import {
   Validators,
 } from '@angular/forms';
 
-import { NgClass } from '@angular/common';
+import { Iuser } from '../interface/interface';
 import { ErrorComponent } from '../error/error.component';
 import { RouterLink } from '@angular/router';
+import { userService } from '../services/user.service';
+
 
 @Component({
   selector: 'app-register',
@@ -17,6 +19,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
+  constructor(public userservice: userService) {}
   public userForm = new FormGroup({
     username: new FormControl('', [
       Validators.required,
@@ -28,11 +31,6 @@ export class RegisterComponent {
     ]),
     email: new FormControl('', [Validators.required, Validators.email]),
   });
-  public Register() {
-    console.log('register');
-    console.log(this.userForm);
-    console.log(this.userForm.valid);
-  }
 
   public get usernameControl(): FormControl {
     return this.userForm.get('username') as FormControl;
@@ -42,5 +40,11 @@ export class RegisterComponent {
   }
   public get emailControl(): FormControl {
     return this.userForm.get('email') as FormControl;
+  }
+  public Register() {
+    if (this.userForm.valid) {
+      const userInfo = this.userForm.value as Iuser;
+      this.userservice.createUser(userInfo).subscribe();
+    }
   }
 }
