@@ -30,7 +30,7 @@ export class LoginComponent {
               )
             });
             if (user) {
-            this.router.navigateByUrl('/mainpage')
+            this.router.navigateByUrl('/mainpage');
             }
           })
         )
