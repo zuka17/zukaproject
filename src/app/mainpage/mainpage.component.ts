@@ -9,8 +9,9 @@ import { userService } from '../services/user.service';
   styleUrl: './mainpage.component.scss',
 })
 export class MainpageComponent {
-   constructor(private router:Router) {}
+   constructor(private router:Router,public userServise:userService) {}
   public logout() {
-       this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/login');
+    this.userServise.loggedUser.set(null);
    }
 }

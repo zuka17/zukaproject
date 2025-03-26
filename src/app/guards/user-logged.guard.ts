@@ -9,5 +9,6 @@ export const userLoggedGuard: CanActivateFn = (route, state) => {
   if (!loggedCustommer) {
     router.navigateByUrl('/login')
   }
+  console.log(!!loggedCustommer)
   return !!loggedCustommer;
 };
