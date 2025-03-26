@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { userRestService } from './user.rest.services';
 import { Observable } from 'rxjs';
 import { Iuser } from '../interface/interface';
@@ -6,6 +6,7 @@ import { Iuser } from '../interface/interface';
   providedIn: 'root',
 })
 export class userService {
+  public loggedUser = signal<Iuser | null>(null);
     constructor(private userestservice: userRestService) { }
     
   public getUsers(): Observable<Iuser[]> {

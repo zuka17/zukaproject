@@ -29,6 +29,7 @@ import { GrrenValentinoComponent } from './grren-valentino/grren-valentino.compo
 import { AfternoonSwimComponent } from './afternoon-swim/afternoon-swim.component';
 import { GrayPerfumesDeMarlyComponent } from './gray-perfumes-de-marly/gray-perfumes-de-marly.component';
 import { PacificChillComponent } from './pacific-chill/pacific-chill.component';
+import { userLoggedGuard } from './guards/user-logged.guard';
 
 export const routes: Routes = [
   {
@@ -53,6 +54,7 @@ export const routes: Routes = [
     path: 'mainpage',
     loadComponent: () =>
       import('./mainpage/mainpage.component').then((m) => MainpageComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'creed',
@@ -61,6 +63,7 @@ export const routes: Routes = [
       import('./creedaventus/creedaventus.component').then(
         (m) => CreedaventusComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'leparfume',
@@ -69,6 +72,7 @@ export const routes: Routes = [
       import('./lemaleleparfume/lemaleleparfume.component').then(
         (m) => LemaleleparfumeComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'strongerwithyouintensly',
@@ -77,6 +81,7 @@ export const routes: Routes = [
       import(
         './strongerwithyouintensly/strongerwithyouintensly.component'
       ).then((m) => StrongerwithyouintenslyComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'elixirobsolu',
@@ -85,12 +90,14 @@ export const routes: Routes = [
       import('./lemaleelixirobsolu/lemaleelixirobsolu.component').then(
         (m) => LemaleelixirobsoluComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'paypage',
     path: 'pay',
     loadComponent: () =>
       import('./paypage/paypage.component').then((m) => PaypageComponent),
+    canActivate: [userLoggedGuard],
   },
 
   {
@@ -100,6 +107,7 @@ export const routes: Routes = [
       import('./paradise-garden/paradise-garden.component').then(
         (m) => ParadiseGardenComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'winterFragrance',
@@ -108,6 +116,7 @@ export const routes: Routes = [
       import('./winter-fragrance/winter-fragrance.component').then(
         (m) => WinterFragranceComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'summerFragrance',
@@ -116,6 +125,7 @@ export const routes: Routes = [
       import('./summer-fragrance/summer-fragrance.component').then(
         (m) => SummerFragranceComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'stryparfume',
@@ -124,18 +134,21 @@ export const routes: Routes = [
       import('./stryparfume/stryparfume.component').then(
         (m) => StryparfumeComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'flower',
     path: 'flower',
     loadComponent: () =>
       import('./flower/flower.component').then((m) => FlowerComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'obsolu',
     path: 'obsolu',
     loadComponent: () =>
       import('./obsolu/obsolu.component').then((m) => ObsoluComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'valentino-uemo',
@@ -144,18 +157,21 @@ export const routes: Routes = [
       import('./valentinoo/valentinoo.component').then(
         (m) => ValentinooComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'obsolute',
     path: 'obsolute',
     loadComponent: () =>
       import('./obsolutly/obsolutly.component').then((m) => ObsolutlyComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'althair',
     path: 'althair',
     loadComponent: () =>
       import('./althhair/althhair.component').then((m) => AlthhairComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'imagination',
@@ -164,36 +180,42 @@ export const routes: Routes = [
       import('./imagination/imagination.component').then(
         (m) => ImaginationComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'coral-fantasy',
     path: 'coral-fantasy',
     loadComponent: () =>
       import('./coral/coral.component').then((m) => CoralComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'mountain-water',
     path: 'mountain-water',
     loadComponent: () =>
       import('./mountain/mountain.component').then((m) => MountainComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'greenly',
     path: 'greenly',
     loadComponent: () =>
       import('./greenly/greenly.component').then((m) => GreenlyComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'stry',
     path: 'stry',
     loadComponent: () =>
       import('./stry/stry.component').then((m) => StryComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'viking',
     path: 'viking',
     loadComponent: () =>
       import('./viking/viking.component').then((m) => VikingComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'ombreNomad',
@@ -202,18 +224,21 @@ export const routes: Routes = [
       import('./ombre-nomad/ombre-nomad.component').then(
         (m) => OmbreNomadComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'layton',
     path: 'layton',
     loadComponent: () =>
       import('./layton/layton.component').then((m) => LaytonComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'valentino',
     path: 'valentino',
     loadComponent: () =>
       import('./valentino/valentino.component').then((m) => ValentinoComponent),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'greenValentino',
@@ -222,6 +247,7 @@ export const routes: Routes = [
       import('./grren-valentino/grren-valentino.component').then(
         (m) => GrrenValentinoComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'afternoon-swim',
@@ -230,6 +256,7 @@ export const routes: Routes = [
       import('./afternoon-swim/afternoon-swim.component').then(
         (m) => AfternoonSwimComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'graypdf',
@@ -238,11 +265,16 @@ export const routes: Routes = [
       import('./gray-perfumes-de-marly/gray-perfumes-de-marly.component').then(
         (m) => GrayPerfumesDeMarlyComponent
       ),
+    canActivate: [userLoggedGuard],
   },
   {
     title: 'pacificChill',
     path: 'pacificChill',
-    loadComponent:()=>import('./pacific-chill/pacific-chill.component').then((m)=>PacificChillComponent)
+    loadComponent: () =>
+      import('./pacific-chill/pacific-chill.component').then(
+        (m) => PacificChillComponent
+      ),
+    canActivate: [userLoggedGuard],
   },
   {
     path: '**',

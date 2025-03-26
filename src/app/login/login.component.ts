@@ -30,6 +30,7 @@ export class LoginComponent {
               )
             });
             if (user) {
+              this.userService.loggedUser.set(user);
             this.router.navigateByUrl('/mainpage');
             }
           })
